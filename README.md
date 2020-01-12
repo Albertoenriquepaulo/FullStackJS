@@ -90,4 +90,12 @@ npx create-react-app frontend
 
 Se eliminaron varios archivos del resultado de haber instalado el react, los de test por ejemplo
 Obtenemos cierta info del siguiente link, facilitado por el teacher
-https://gist.github.com/juanpablogdl/9f75be22c9fa50b6f0d7ccb63e03408c
+[Link](https://gist.github.com/juanpablogdl/9f75be22c9fa50b6f0d7ccb63e03408c)
+
+## 316. Agregando Routing y Componentes Principales
+
+Instalamos **React router dom** de esta forma podemos ir a diferente páginas y cargar diferentes componentes. Es una dependencia que no viene en React, lo instalamos dentro del folder _frontend_
+
+```
+npm install react-router-dom
+```
