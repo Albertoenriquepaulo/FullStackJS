@@ -26,3 +26,12 @@ La de desarrollo, esta lo que hará es que cada vez que hagamos cambios, reinici
 ```
 npm install --save-dev nodemon
 ```
+
+## 304. Conectando a MongoDB
+
+- Cree un cluster en mongoDB Atlas -> https://cloud.mongodb.com, llamado Cluster0
+- Installe MongoDB Compass lo conecté con el cluster y cree una BD llamada veterinaria:
+
+```
+mongodb+srv://root:<PASSWORD>@cluster0-am6vz.mongodb.net/test?retryWrites=true&w=majority
+```
