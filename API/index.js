@@ -1,5 +1,6 @@
 const express = require('express');
 const mongoose = require('mongoose');
+const routes = require('./routes');
 
 // Crear el servidor
 const app = express();
@@ -11,6 +12,9 @@ mongoose.connect('mongodb+srv://root:1234@cluster0-am6vz.mongodb.net/test?retryW
     useUnifiedTopology: true,
     useFindAndModify: false
 });
+
+// Habilitar routing. Middleware de Express
+app.use('/', routes())
 
 // Puerto y arrancar el servidor
 app.listen(4000, (s) => {
