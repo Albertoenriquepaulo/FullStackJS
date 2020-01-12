@@ -47,3 +47,18 @@ POST: http://localhost:4000/pacientes
   "mensaje": "El cliente se agregó correctamente"
 }
 ```
+
+## 309. Leyendo los contenidos de una petición con body-parser
+
+Usando bodyParser. Desde Insomnia y con un console log vimos en el cmd que si recibe los datos. Es justo lo que hace bodyParser
+
+```
+POST: http://localhost:4000/pacientes
+{
+  "nombre": "Hook",
+  "propietario": "Alberto",
+  "fecha": "2020-01-12",
+  "hora": "10:30",
+  "sintomas": "Aqui algunos sintomas"
+}
+```

@@ -1,6 +1,7 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const routes = require('./routes');
+const bodyParser = require('body-parser');
 
 // Crear el servidor
 const app = express();
@@ -13,8 +14,14 @@ mongoose.connect('mongodb+srv://root:1234@cluster0-am6vz.mongodb.net/test?retryW
     useFindAndModify: false
 });
 
+// Habilitar el body parser
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
+
+
 // Habilitar routing. Middleware de Express
 app.use('/', routes())
+
 
 // Puerto y arrancar el servidor
 app.listen(4000, (s) => {
