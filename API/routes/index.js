@@ -12,5 +12,9 @@ module.exports = function () {
 
     // Obtiene un solo paciente de la DB dado el ID
     router.get('/pacientes/:id', pacienteController.obtenerPacienteByID);
+
+    // Actualizar un paciente especifico de la DB dado el ID
+    router.put('/pacientes/:id', pacienteController.actualizarPacienteByID);
+
     return router;
 }

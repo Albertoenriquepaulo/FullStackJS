@@ -38,3 +38,16 @@ exports.obtenerPacienteByID = async (req, res, next) => {
         next();
     }
 }
+
+// Actualizar un paciente especifico de la DB dado el ID
+exports.actualizarPacienteByID = async (req, res, next) => {
+    try {
+        const paciente = await Paciente.findOneAndUpdate({ _id: req.params.id }, req.body, {
+            new: true // Esto es para que traiga el nuevo resultado ya modificado, sino trae el anterior, para ver el resultado
+        });
+        res.json(paciente);
+    } catch (error) {
+        console.log(error);
+        next();
+    }
+}
