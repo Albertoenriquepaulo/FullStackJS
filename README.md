@@ -62,3 +62,18 @@ POST: http://localhost:4000/pacientes
   "sintomas": "Aqui algunos sintomas"
 }
 ```
+
+## 310. Insertando un registro en la BD
+
+Se corrigió la cadena de conexion, se usa la misma usada para conectar Compass
+
+> cadena de conexión: mongodb+srv://root:1234@cluster0-am6vz.mongodb.net/veterinaria
+
+```
+mongoose.Promise = global.Promise;
+mongoose.connect('mongodb+srv://root:1234@cluster0-am6vz.mongodb.net/veterinaria', {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    useFindAndModify: false
+});
+```

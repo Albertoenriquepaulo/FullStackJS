@@ -8,7 +8,8 @@ const app = express();
 
 // Conectar a mongDB
 mongoose.Promise = global.Promise;
-mongoose.connect('mongodb+srv://root:1234@cluster0-am6vz.mongodb.net/test?retryWrites=true&w=majority/veterinaria', {
+// mongoose.connect('mongodb+srv://root:1234@cluster0-am6vz.mongodb.net/test?retryWrites=true&w=majority/veterinaria', {
+mongoose.connect('mongodb+srv://root:1234@cluster0-am6vz.mongodb.net/veterinaria', {
     useNewUrlParser: true,
     useUnifiedTopology: true,
     useFindAndModify: false
