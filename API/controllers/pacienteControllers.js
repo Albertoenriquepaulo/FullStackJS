@@ -51,3 +51,14 @@ exports.actualizarPacienteByID = async (req, res, next) => {
         next();
     }
 }
+
+// Eliminar un paciente especifico de la DB dado el ID
+exports.deletePacienteByID = async (req, res, next) => {
+    try {
+        const paciente = await Paciente.findOneAndDelete({ _id: req.params.id });
+        res.json({ mensaje: `El paciente ${paciente._id} : ${paciente.nombre} ha sido eliminado exitosamente` });
+    } catch (error) {
+        console.log(error);
+        next();
+    }
+}

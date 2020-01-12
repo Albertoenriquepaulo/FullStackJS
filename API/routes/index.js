@@ -16,5 +16,8 @@ module.exports = function () {
     // Actualizar un paciente especifico de la DB dado el ID
     router.put('/pacientes/:id', pacienteController.actualizarPacienteByID);
 
+    // Eliminar un paciente especifico de la DB dado el ID
+    router.delete('/pacientes/:id', pacienteController.deletePacienteByID);
+
     return router;
 }
