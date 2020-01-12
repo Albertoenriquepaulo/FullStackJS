@@ -99,3 +99,11 @@ Instalamos **React router dom** de esta forma podemos ir a diferente páginas y 
 ```
 npm install react-router-dom
 ```
+
+## 317. Agregando una base para las consultas a la API con Axios
+
+Instalamos axios desde el folder **frontend**
+
+```
+npm install axios
+```
