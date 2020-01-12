@@ -2,9 +2,14 @@ const express = require('express');
 const mongoose = require('mongoose');
 const routes = require('./routes');
 const bodyParser = require('body-parser');
+const cors = require('cors');
 
 // Crear el servidor
 const app = express();
+
+// Habilitar Cors
+app.use(cors());  // Hay una manera de restringir el acceso a ciertos dominios, para esto ver video 319, min 3.00
+
 
 // Conectar a mongDB
 mongoose.Promise = global.Promise;

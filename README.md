@@ -107,3 +107,16 @@ Instalamos axios desde el folder **frontend**
 ```
 npm install axios
 ```
+
+## 319. Habilitando CORS
+
+Hay que habilitar CORS, y esto se hace desde el lado del **Backend**, es decir desde el folder **API**.
+Abrimos un terminal en ese folder y ejecutamos:
+
+```
+npm install cors
+```
+
+## 319. Habilitando CORS
+
+> Hay una manera de habilitar restricciones para acceso a los datos a través de CORS, no está implementada en este código, pero puede verse en el video, en el minuto 3:00.
