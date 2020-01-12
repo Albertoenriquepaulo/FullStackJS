@@ -27,3 +27,14 @@ exports.obtenerPacientes = async (req, res, next) => {
         next();
     }
 }
+
+// Obtiene un solo paciente de la DB dado el ID
+exports.obtenerPacienteByID = async (req, res, next) => {
+    try {
+        const paciente = await Paciente.findById(req.params.id);
+        res.json(paciente);
+    } catch (error) {
+        console.log(error);
+        next();
+    }
+}
