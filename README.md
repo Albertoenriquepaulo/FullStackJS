@@ -35,3 +35,15 @@ npm install --save-dev nodemon
 ```
 mongodb+srv://root:<PASSWORD>@cluster0-am6vz.mongodb.net/test?retryWrites=true&w=majority
 ```
+
+## 308. Enviando una petición hacia el servidor
+
+Con Insomnia probamos con un POST que devolvia valores.
+
+```
+POST: http://localhost:4000/pacientes
+
+{
+  "mensaje": "El cliente se agregó correctamente"
+}
+```
