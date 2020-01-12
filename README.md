@@ -77,3 +77,17 @@ mongoose.connect('mongodb+srv://root:1234@cluster0-am6vz.mongodb.net/veterinaria
     useFindAndModify: false
 });
 ```
+
+## 315. Creando la App y Primeros Pasos
+
+La idea es tener el BackEnd y FronEnd separados, dice el instructor que es el futuro del frontend. Ejecutamos el siguiente comando en la carpeta padre de "API Folder"
+
+```
+npx create-react-app frontend
+```
+
+## 315. Creando la App y Primeros Pasos
+
+Se eliminaron varios archivos del resultado de haber instalado el react, los de test por ejemplo
+Obtenemos cierta info del siguiente link, facilitado por el teacher
+https://gist.github.com/juanpablogdl/9f75be22c9fa50b6f0d7ccb63e03408c
