@@ -24,6 +24,7 @@ function crearVentana() {
     // Cuando la app esté lista mostrar la ventana
     appWindow.once('ready-to-show', () => {
         appWindow.show();
+        console.log(':0');
     });
 
 }
