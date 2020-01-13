@@ -27,10 +27,11 @@ La de desarrollo, esta lo que hará es que cada vez que hagamos cambios, reinici
 $ npm install --save-dev nodemon
 ```
 
-## 304. Conectando a MongoDB
+## 304. Conectando a MongoDB. (MONGODB ATLAS)
 
+- Use mongoDb Atlas, el teacher no lo usa, lo implementé para aprender y tener la DB en la nube
 - Cree un cluster en mongoDB Atlas -> https://cloud.mongodb.com, llamado Cluster0
-- Installe MongoDB Compass lo conecté con el cluster y cree una BD llamada veterinaria:
+- Installe MongoDB Compass lo conecté con el cluster y cree una BD llamada veterinaria, dentro de esta un documento o Collection llamado pacientes y es aqui donde están los datos
 
 ```
 mongodb+srv://root:<PASSWORD>@cluster0-am6vz.mongodb.net/test?retryWrites=true&w=majority
