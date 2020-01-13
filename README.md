@@ -145,3 +145,28 @@ En nuestro caso instalamos **The latest version**
 ```
 $ npm i -D electron@latest
 ```
+
+## 336. Compilando la App para distribución
+
+- Añadimos el icono en el index.js del Desktop folder
+- Instalamos una dependencia que nos permite crear los instalables, es una dependencia de desarrollo
+
+```
+$ npm install --save-dev electron-builder
+```
+
+- Terminada la instalación, _package.json_ de Desktop folder, creamos un segundo script.
+
+```
+"dist": "electron-builder -w" // Para Windows
+"dist": "electron-builder -l" // Para Linux
+"dist": "electron-builder -l" // Para Mac
+```
+
+Ejecutamos:
+
+```
+$ npm run dist
+```
+
+Se crean los archivos en un folder llamado **dist**, en esta carpeta estará el ejecutable/instalador _.exe_ de la app

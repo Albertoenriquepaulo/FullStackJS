@@ -10,7 +10,8 @@ function crearVentana() {
         minWidth: 800,  // limite minimo de tamaño que puede setear el usuario
         minHeight: 600,
         center: true,
-        show: false //Con esto la app no se muestra hasta tanto no se cargue todo, evita mostrar una pantalla vacia
+        show: false, //Con esto la app no se muestra hasta tanto no se cargue todo, evita mostrar una pantalla vacia
+        icon: 'icon.png'
     });
 
     // Cuando la app es cerrada
