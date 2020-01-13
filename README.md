@@ -187,3 +187,24 @@ $ npm install concurrently wait-on electron electron-builder typescript
 ```
 
 > Todos estos cambios los podemos ir viendo en el _package.json_ del folder frontend
+
+-Tambien añadimos al _package.json_ de frontend folder, lo siguiente
+
+```
+  "scripts": {
+    "react-start": "react-scripts start",
+    "react-build": "react-scripts build",
+    "react-test": "react-scripts test",
+    "react-eject": "react-scripts eject",
+    "electron-build": "electron-builder",
+    "releas": "yarn react-build && electron-builder --publish=always",
+    "build": "yarn react-build && yarn electron-build",
+    "start": "concurrently \"cross-env BROWSER=none npm run react-start\" \"wait-on http://localhost:3000 && electron .\""
+  },
+  "main": "public/electron.js",
+  "homepage": "./",
+```
+
+> Añadimos el prefijo _react_ a los 4 primeros, el resto, investigar para que
+
+## Estos procedimientos de Electron son aplicables además de REACT a cualquier proyecto de Angular, VUE, JQuery y JS Puro
