@@ -208,3 +208,5 @@ $ npm install concurrently wait-on electron electron-builder typescript
 > Añadimos el prefijo _react_ a los 4 primeros, el resto, investigar para que
 
 ## Estos procedimientos de Electron son aplicables además de REACT a cualquier proyecto de Angular, VUE, JQuery y JS Puro
+
+> Solo falta generar los instaladores de esta app
