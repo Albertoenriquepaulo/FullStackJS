@@ -53,7 +53,10 @@ function App() {
 
             return (
               <Cita
-                cita={cita[0]} /> //De esta manera pasamos esa info
+                cita={cita[0]}
+                guardarConsultar={guardarConsultar}
+              /> //De esta manera pasamos esa info
+
             )
           }}
         />
