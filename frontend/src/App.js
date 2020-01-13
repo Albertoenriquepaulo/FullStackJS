@@ -47,7 +47,15 @@ function App() {
         />
         <Route
           exact path='/cita/:id'
-          component={Cita}
+          render={(props) => {
+            const cita = citas.filter((cita) => cita._id === props.match.params.id)
+            console.log(cita);
+
+            return (
+              <Cita
+                cita={cita[0]} /> //De esta manera pasamos esa info
+            )
+          }}
         />
       </Switch>
     </Router>
