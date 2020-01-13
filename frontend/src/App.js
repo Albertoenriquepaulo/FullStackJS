@@ -11,20 +11,27 @@ function App() {
 
   // State de la app
   const [citas, guardarCitas] = useState([]);
+  const [consultar, guardarConsultar] = useState(true); //Esta como true porque queremos que la 1era vez que carge consulte la API
+
 
   useEffect(() => {
-    const consultarAPI = () => {
-      clienteAxios.get('/pacientes')
-        .then((respuesta) => {
-          // colocar en el state el resultado
-          guardarCitas(respuesta.data);
-        })
-        .catch((error) => {
-          console.log(error);
-        })
+    if (consultar) {
+      const consultarAPI = () => {
+        clienteAxios.get('/pacientes')
+          .then((respuesta) => {
+            // colocar en el state el resultado
+            guardarCitas(respuesta.data);
+
+            // Deshabilitar la consulta
+            guardarConsultar(false);
+          })
+          .catch((error) => {
+            console.log(error);
+          })
+      }
+      consultarAPI();
     }
-    consultarAPI();
-  }, []);
+  }, [consultar]); //consultar aqui, es para decirle a REACT que cuando cambie consultar se ejecute de nuevo
 
   console.log(process.env.REACT_APP_BACKEND_URL);
   return (
@@ -36,7 +43,7 @@ function App() {
         />
         <Route
           exact path='/nueva'
-          component={NuevaCita}
+          component={() => <NuevaCita guardarConsultar={guardarConsultar} />}
         />
         <Route
           exact path='/cita/:id'
