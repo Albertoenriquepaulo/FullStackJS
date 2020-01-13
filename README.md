@@ -10,7 +10,7 @@ Backend en Mongo y Express.
 Lo primero generar un package.json que va manejar nuestras dependecencias y los scripts
 
 ```
-npm init
+$ npm init
 ```
 
 ## Par de dependencias para lo que es el proyecto y una de desarrollo
@@ -18,13 +18,13 @@ npm init
 Las dos del proyecto
 
 ```
-npm install express mongoose
+$ npm install express mongoose
 ```
 
 La de desarrollo, esta lo que hará es que cada vez que hagamos cambios, reiniciará el servidor para ver los cambios sin tener que parar e iniciar nuevamente el server
 
 ```
-npm install --save-dev nodemon
+$ npm install --save-dev nodemon
 ```
 
 ## 304. Conectando a MongoDB
@@ -83,7 +83,7 @@ mongoose.connect('mongodb+srv://root:1234@cluster0-am6vz.mongodb.net/veterinaria
 La idea es tener el BackEnd y FronEnd separados, dice el instructor que es el futuro del frontend. Ejecutamos el siguiente comando en la carpeta padre de "API Folder"
 
 ```
-npx create-react-app frontend
+$ npx create-react-app frontend
 ```
 
 ## 315. Creando la App y Primeros Pasos
@@ -97,7 +97,7 @@ Obtenemos cierta info del siguiente link, facilitado por el teacher
 Instalamos **React router dom** de esta forma podemos ir a diferente páginas y cargar diferentes componentes. Es una dependencia que no viene en React, lo instalamos dentro del folder _frontend_
 
 ```
-npm install react-router-dom
+$ npm install react-router-dom
 ```
 
 ## 317. Agregando una base para las consultas a la API con Axios
@@ -105,7 +105,7 @@ npm install react-router-dom
 Instalamos axios desde el folder **frontend**
 
 ```
-npm install axios
+$ npm install axios
 ```
 
 ## 319. Habilitando CORS
@@ -114,7 +114,16 @@ Hay que habilitar CORS, y esto se hace desde el lado del **Backend**, es decir d
 Abrimos un terminal en ese folder y ejecutamos:
 
 ```
-npm install cors
+$ npm install cors
 ```
 
 > Hay una manera de habilitar restricciones para acceso a los datos a través de CORS, no está implementada en este código, pero puede verse en el video, en el minuto 3:00.
+
+## 329. Sweet Alert para eliminar una Cita
+
+Agregaremos un alerta de **Sweet Alert** para eliminar un registro de la BD, aqui los ejemplos y las instrucciones de como instalarlo
+[Sweet Alert](https://sweetalert2.github.io/#examples)
+
+```
+$ npm install sweetalert2
+```
