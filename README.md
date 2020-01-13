@@ -117,6 +117,4 @@ Abrimos un terminal en ese folder y ejecutamos:
 npm install cors
 ```
 
-## 319. Habilitando CORS
-
 > Hay una manera de habilitar restricciones para acceso a los datos a través de CORS, no está implementada en este código, pero puede verse en el video, en el minuto 3:00.

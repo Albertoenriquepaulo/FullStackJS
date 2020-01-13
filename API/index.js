@@ -31,7 +31,8 @@ app.use('/', routes())
 
 // Puerto y arrancar el servidor
 app.listen(4000, (s) => {
-    console.log('Server is running on port 4000...');
+    console.log('Server is running on port 4000...😀');
+    console.log('http://localhost:4000');
 });
 
 
