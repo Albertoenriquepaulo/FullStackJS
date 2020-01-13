@@ -128,3 +128,20 @@ Agregaremos un alerta de **Sweet Alert** para eliminar un registro de la BD, aqu
 ```
 $ npm install sweetalert2
 ```
+
+## 331. Creando el Proyecto e Instalando Electron
+
+Primero debemos crear el archivo _package.json_ porque las dependencias de esta apliacción serán diferentes a las de la API y las del frontend, para esto basta con ejecutar:
+
+```
+$ npm init
+```
+
+Con la ejecución del comando, lo primero que nos pregunta es el _package name_ y nos sugiere el nombre _desktop_ se lo cambiamos porque es un nombre muy común _fullstackjs-desktop_
+
+Instalamos [electron](https://electronjs.org/), importante verificar la version de node minima que requiere la instalación, esto en los release de la página se puede ver fácilmente.
+En nuestro caso instalamos **The latest version**
+
+```
+$ npm i -D electron@latest
+```
