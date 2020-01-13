@@ -169,4 +169,21 @@ Ejecutamos:
 $ npm run dist
 ```
 
-Se crean los archivos en un folder llamado **dist**, en esta carpeta estará el ejecutable/instalador _.exe_ de la app
+- Finalmente Se crean los archivos en un folder llamado **dist**, en esta carpeta estará el ejecutable/instalador _.exe_ de la app
+
+## 337. Agregando Electron sobre la App existente
+
+- Nos aseguramos de estar en la carpeta donde esta el proyecto, en este caso _frontend_, e instalaremos alguna dependencias de desarrollo
+  Podemos crear una copia de la carpeta, duplicar el proyecto, etc
+
+```
+$ npm install --save-dev cross-env electron-is-dev
+```
+
+- Instalamos otras dependencias que no son de desarrollo
+
+```
+$ npm install concurrently wait-on electron electron-builder typescript
+```
+
+> Todos estos cambios los podemos ir viendo en el _package.json_ del folder frontend
